@@ -139,6 +139,18 @@ public class GestorDatos {
 
         return (vehiculo != null) ? vehiculo.getPasajerosTransportados() : -1;  // Retorna -1 si no se encuentra
     }
+    public ArrayList<Usuario> obtenerUsuariosMayoresEdad() {
+        ArrayList<Usuario> mayoresEdad = new ArrayList<>();
+
+        for (Usuario u : usuarios) {
+            if (u.getEdad() >= 18) {
+                mayoresEdad.add(u);
+            }
+        }
+
+        return mayoresEdad;
+    }
+
 
 
 }
